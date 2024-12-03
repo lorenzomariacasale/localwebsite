@@ -1,0 +1,206 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+.main-header {
+    background: #222;
+    color: white;
+    padding: 0.5em 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Container Layout */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-right: auto; /* Align to the left */
+    position: relative;
+    left: -300px; /* Move further left */
+}
+
+/* Navbar Styling */
+.navbar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.2em;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ffcc00;
+}
+
+/* Icons Section */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-left: auto; /* Align to the right */
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.icon-button:hover {
+    color: #ffcc00;
+}
+
+/* Section Styling */
+section {
+    margin: 2em auto;
+    max-width: 800px;
+    padding: 1em 2em;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Profile Picture Styling */
+section#bio img {
+    display: block;
+    margin: 0 auto 1em;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode Styling */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #f4f4f4;
+}
+
+/* Header in Dark Mode */
+body.dark-mode .main-header {
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    color: #f4f4f4;
+}
+
+/* Navigation Links in Dark Mode */
+body.dark-mode .nav-links li a {
+    color: #f4f4f4;
+}
+
+body.dark-mode .nav-links li a:hover {
+    color: #ffcc00;
+}
+
+/* Footer in Dark Mode */
+body.dark-mode footer {
+    background: #000;
+    color: #aaa;
+    border-top-color: #333;
+}
+
+/* Section Styling in Dark Mode */
+body.dark-mode section {
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Image Shadow in Dark Mode */
+body.dark-mode section#bio img {
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+/* Transition for Smooth Theme Switch */
+body, .main-header, footer, section {
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5em;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-icons {
+        margin-top: 1em;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .main-header {
+        padding: 1em 0;
+    }
+
+    section {
+        margin: 1em auto;
+        padding: 1em;
+    }
+
+    section#bio img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Footer Styling */
+footer {
+    background: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 1.5em;
+    font-size: 0.9em;
+}
